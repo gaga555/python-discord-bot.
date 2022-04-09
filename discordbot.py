@@ -26,12 +26,12 @@ vip_mas_shindaivalley = ["V-DMrq","EiMizB","HnMWGq","W7GqY1","hxaQIX","-sLFJY","
 
 
 def cooldown(rate, per_sec=0, per_min=0, per_hour=0, type=commands.BucketType.default):
-    return commands.cooldown(rate, per_sec + 60 * per_min + 3600 * per_hour, type)
+    return commands.cooldown(rate, per_sec + 60 * per_min + 3600 * per_sec, type)
 
 
 
 @bot.command(pass_context=True)  # разрешаем передавать агрументы
-@cooldown(1, per_hour=62, type=commands.BucketType.user)
+@cooldown(1, per_sec=5, type=commands.BucketType.user)
 @commands.has_role('Vip')
 async def vipember(ctx):  # создаем асинхронную фунцию бота
     var_mas_ember = random.choice(vip_mas_ember)
