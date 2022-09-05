@@ -5,7 +5,7 @@ from discord.ext import commands
 import time
 import os
 
-TOKEN = 'OTA3NjUzMDIyNTkzNzM2Nzk0.YYqTvw.1eFnPNuBMmLAigtxE7B7jRLDMDU'
+TOKEN = 'your token'
 bot = commands.Bot(command_prefix='!')
 
 
